@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+        <img src="kama.jpg.jpg">
+       <span>KamachendricRestaurant</span>
+    </div>
+    <nav class="navbar1">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="menu.html" class="nav-btn">Menu</a>
+    <a href="myreservation.html" class="nav-btn">My Reservation</a>
+    <a href="Profile.html" class="nav-btn">Profile</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+    <nav class="nav-buttons">
+       <a href="book.html" class="Book a Table Now">📅Book a Table Now</a>
+        <a href ="logout.html" class="Logout">Log out</a>
+        
+      <div class="menu-container">
+    <!-- Hamburger icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdownMenu">
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='signup.html'">Signup</button>
+      <button onclick="location.href='about.html'">About Us</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("show");
+    }
+  </script>
+
+</body>  
+    
+    </div>
+    </header>
+
+
+
+    <section class="menu">
+    <h2>Our Menu</h2>
+    <p>Explore our carefully curated selection of dishes, prepared with the finest ingredients by our talented chefs.</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="appetizer">Appetizer</button>
+      <button class="tab" data-tab="main">Main Courses</button>
+      <button class="tab" data-tab="desserts">Desserts</button>
+      <button class="tab" data-tab="beverages">Beverages</button>
+    </div>
+
+    <div class="tab-content active" id="appetizer">
+      <div class="item">
+        <img src="calamari.jpg" alt="Calamari Fritti">
+        <div>
+          <h3>Calamari Fritti <span>₱170</span></h3>
+          <p>Crispy fried squid with marinara sauce</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="salad.jpg" alt="Pinoy Caesar Salad">
+        <div>
+          <h3>Pinoy Caesar Salad <span>₱100</span></h3>
+          <p>Classic Caesar, Chinese pechay and croutons</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="brusceta.jpg" alt="Bruschetta">
+        <div>
+          <h3>Bruschetta <span>₱150</span></h3>
+          <p>Toasted bread with tomatoes, garlic, and basil</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="soup.jpg" alt="Soup of the Day">
+        <div>
+          <h3>Soup of the Day <span>₱85</span></h3>
+          <p>Smooth and comforting soup mixed with pure vegetables cream</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="main">
+      <div class="item">
+        <img src="grilled.jpg" alt="Grilled Salmon">
+        <div>
+          <h3>Grilled Salmon <span>₱250</span></h3>
+          <p>Served with lemon butter sauce</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="pasta.jpg" alt="Chicken Alfredo">
+        <div>
+          <h3>Chicken Alfredo <span>₱220</span></h3>
+          <p>Classic creamy pasta with grilled chicken</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="steak.jpg" alt="Steak">
+        <div>
+          <h3>Steak <span>₱500</span></h3>
+          <p>Grilled beef steak</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="curry.jpg" alt="Chicken Curry">
+        <div>
+          <h3>Chicken Curry <span>₱330</span></h3>
+          <p>Spiced curry with coconut milk or sauce</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="desserts">
+      <div class="item">
+        <img src="chocolate.jpg" alt="Chocolate Cake">
+        <div>
+          <h3>Chocolate Cake <span>₱120</span></h3>
+          <p>Rich and moist chocolate layer cake</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="leche.jpg" alt="Leche Flan">
+        <div>
+          <h3>Leche Flan <span>₱90</span></h3>
+          <p>Traditional Filipino caramel custard</p>
+        </div>
+      </div>
+       <div class="item">
+        <img src="red.jpg" alt="Red velvet cake">
+        <div>
+          <h3>Red Velvet Cake <span>₱180</span></h3>
+          <p>Soft red cake with cream cheese frosting</p>
+        </div>
+      </div>
+       <div class="item">
+        <img src="mango.jpg" alt="Mangofloat">
+        <div>
+          <h3>Mango float <span>₱120</span></h3>
+          <p>layers of graham,cream, and ripe mangoes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="beverages">
+      <div class="item">
+        <img src="tea.jpg" alt="Iced Tea">
+        <div>
+          <h3>Iced Tea <span>₱60</span></h3>
+          <p>Refreshing classic blend</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="coffee.jpg" alt="Coffee">
+        <div>
+          <h3>Coffee <span>₱75</span></h3>
+          <p>Freshly brewed hot coffee</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="lemon.jpg" alt="lemonade">
+        <div>
+          <h3>Lemonade <span>₱60</span></h3>
+          <p>Fresh lemon juice mixed sugar and water</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="tail.jpg" alt="Moctails">
+        <div>
+          <h3>Mocktails <span></span>₱150</h3>
+          <p>Non-alcoholic mixed drinks like Virgin Mojito or Shirley Temple</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">Menu items and prices are subject to change. Please ask your server about daily specials and seasonal offerings.</p>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

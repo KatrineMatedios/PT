@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header class="navbar">
+    <div class="logo">
+        <img src="kama.jpg.jpg">
+       <span>KamachendricRestaurant</span>
+    </div>
+    <nav class="navbar1">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="menu.html" class="nav-btn">Menu</a>
+    <a href="myreservation.html" class="nav-btn">My Reservation</a>
+    <a href="Profile.html" class="nav-btn">Profile</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+    <nav class="nav-buttons">
+       <a href="book.html" class="Book a Table Now">📅Book a Table Now</a>
+        <a href ="logout.html" class="Logout">Log out</a>
+        
+      <div class="menu-container">
+    <!-- Hamburger icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdownMenu">
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='signup.html'">Signup</button>
+      <button onclick="location.href='about.html'">About Us</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("show");
+    }
+  </script>
+
+</body>  
+    
+    </div>
+    </header>
+
+
+
+<!-- Hero Section -->
+  <section class="hero">
+    <h2>Reserve Your Perfect Dining Experience</h2>
+    <p>Discover and book tables at the finest restaurants in your city. From intimate dinners to large celebrations, we've got you covered.</p>
+    <button class="main-btn">📅 Book a Table Now</button>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="features">
+    <h3>Why Choose KamachendricRestaurant</h3>
+    <div class="feature-boxes">
+      <div class="feature">
+        <div class="icon">🪑</div>
+        <h4>Easy Booking</h4>
+        <p>Reserve your table in just a few clicks</p>
+      </div>
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h4>Instant Confirmation</h4>
+        <p>Get immediate confirmation of your reservation</p>
+      </div>
+      <div class="feature">
+        <div class="icon">👥</div>
+        <h4>Group Reservations</h4>
+        <p>Book for any party size with ease</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h3>About Us</h3>
+    <p>KamachendricRestaurant makes it easy to discover and book tables at the best restaurants in your city.</p>
+  </section>
+
+</body>
+</html>
+Sent
+Write to
+<script>
+  
+document.getElementById("logouthtml").addEventListener("click", function() {
+      localStorage.clear();
+      alert("You have logged out.");
+      window.location.href = "signup.html";
+    });
+  </script>
+
+</body>
+</html> 

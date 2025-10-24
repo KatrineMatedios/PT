@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+        <img src="kama.jpg.jpg">
+       <span>KamachendricRestaurant</span>
+    </div>
+    <nav class="navbar1">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="menu.html" class="nav-btn">Menu</a>
+    <a href="myreservation.html" class="nav-btn">My Reservation</a>
+    <a href="Profile.html" class="nav-btn">Profile</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+    <nav class="nav-buttons">
+       <a href="book.html" class="Book a Table Now">📅Book a Table Now</a>
+        <a href ="logout.html" class="Logout">Log out</a>
+
+      <div class="menu-container">
+    <!-- Hamburger icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdownMenu">
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='signup.html'">Signup</button>
+      <button onclick="location.href='about.html'">About Us</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("show");
+    }
+  </script>
+
+</body>  
+    
+    </div>
+    </header>
+
+
+ <div class="contact-box">
+    <h3>Contact Us</h3>
+    <p><i class="fa-solid fa-phone"></i> (555) - 1234 - 567</p>
+    <p><i class="fa-solid fa-envelope"></i> <a 
+    href="mailto:kamachendric@gmail.com">kamachendric@gmail.com</a></p>
+    <p><i class="fa-solid fa-location-dot"></i> 123 LLCC - CEBU</p>
+
+    <h3>Follow Us</h3>
+    <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com" target="_blank">facebook</a></p>
+    <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com" target="_blank">instagram</a></p>
+  </div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+        <img src="kama.jpg.jpg">
+       <span>KamachendricRestaurant</span>
+    </div>
+    <nav class="navbar1">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="menu.html" class="nav-btn">Menu</a>
+    <a href="myreservation.html" class="nav-btn">My Reservation</a>
+    <a href="Profile.html" class="nav-btn">Profile</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+    <nav class="nav-buttons">
+       <a href="book.html" class="Book a Table Now">📅Book a Table Now</a>
+        <a href ="logout.html" class="Logout">Log out</a>
+
+      <div class="menu-container">
+    <!-- Hamburger icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdownMenu">
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='signup.html'">Signup</button>
+      <button onclick="location.href='about.html'">About Us</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("show");
+    }
+  </script>
+
+</body>  
+    
+    </div>
+    </header>
+
+
+
+
+
+   <div class="details-box">
+    <h2>My Reservation</h2>
+    <p><strong>Date:</strong> <span id="res-date"></span></p>
+    <p><strong>Time:</strong> <span id="res-time"></span></p>
+    <p><strong>Guests:</strong> <span id="res-guest"></span></p>
+    <p><strong>Special Request:</strong> <span id="res-request"></span></p>
+
+    <div class="buttons">  
+      <button class="add-btn"
+      onclick="addNewReservation()">Add New Reservation
+    </button>
+    <button class="cancel-res-btn"
+    onclick="cancelReservation()">Cancel Reservation</button>
+
+    </div>
+  </div>
+
+  <script>
+    const reservation = JSON.parse(localStorage.getItem("reservation"));
+
+    if (reservation) {
+      document.getElementById("res-date").textContent = reservation.date;
+      document.getElementById("res-time").textContent = reservation.time;
+      document.getElementById("res-guest").textContent = reservation.guest;
+      document.getElementById("res-request").textContent = reservation.request || "None";
+    } else {
+      document.querySelector(".details-box").innerHTML = `
+        <h2>No Reservation Found</h2>
+        <button class="add-btn"
+       onclick="addNewReservation()"> Add New Reservation</
+       button>
+      `;
+    }
+
+     function addNewReservation() {
+      window.location.href = "book.html";
+    }
+
+    function cancelReservation() {
+      const confirmCancel = confirm("❌ Are you sure you want to cancel your reservation?");
+      if (confirmCancel) {
+        localStorage.removeItem("reservation");
+        alert("Your reservation has been cancelled.");
+        window.location.href = "myreservation.html";
+      }
+    }
+  
+  </script>
+
+
+</body>
+</html>

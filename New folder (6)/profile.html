@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+        <img src="kama.jpg.jpg">
+       <span>KamachendricRestaurant</span>
+    </div>
+    <nav class="navbar1">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="menu.html" class="nav-btn">Menu</a>
+    <a href="myreservation.html" class="nav-btn">My Reservation</a>
+    <a href="Profile.html" class="nav-btn">Profile</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+    <nav class="nav-buttons">
+       <a href="book.html" class="Book a Table Now">📅Book a Table Now</a>
+        <a href ="logout.html" class="Logout">Log out</a>
+
+      <div class="menu-container">
+    <!-- Hamburger icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="dropdownMenu">
+      <button onclick="location.href='login.html'">Login</button>
+      <button onclick="location.href='signup.html'">Signup</button>
+      <button onclick="location.href='about.html'">About Us</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("show");
+    }
+  </script>
+
+</body>  
+    
+    </div>
+    </header>
+
+<div class="container">
+    <h2>My Profile</h2>
+
+    <div class="profile-box">
+      <h3>Personal Information</h3>
+      <p class="subtext">Update your personal information and contact details</p>
+
+      <div class="avatar-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar" class="avatar">
+        <button class="change-avatar">Change avatar</button>
+      </div>
+
+      <form id="profileForm">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="fullname" value="">
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-icon">
+            <span>📧</span>
+            <input type="email" id="email" value="your.email@example.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" id="phone" value="">
+        </div>
+
+        <div class="form-group">
+          <label>Address</label>
+          <div class="input-icon">
+            <span>📍</span>
+            <input type="text" id="address" value="">
+          </div>
+        </div>
+
+        <button type="button" class="save-btn" onclick="saveChanges()">Save Changes</button>
+      </form>
+    </div>
+
+   
+<div class="account-box">
+      <div class="setting-row">
+        <div>
+          <h4>Account Settings</h4>
+          <p>Manage your account preferences and security</p>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <h4>Change Password</h4>
+          <p>Update your password regularly for security</p>
+        </div>
+        <button class="update-btn" onclick="changePassword()">Update</button>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <h4>Email Notifications</h4>
+          <p>Receive updates about your reservations</p>
+        </div>
+        <button class="manage-btn" onclick="manageEmail()">Manage</button>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <h4>Delete Account</h4>
+          <p>Permanently delete your account and data</p>
+        </div>
+        <button class="delete-btn" onclick="deleteAccount()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function saveChanges() {
+      const name = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+
+      localStorage.setItem('fullname', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('phone', phone);
+      localStorage.setItem('address', address);
+
+      alert("Your changes have been saved!");
+    }
+
+    // Load saved data on refresh
+    window.onload = () => {
+      document.getElementById('fullname').value = localStorage.getItem('fullname') || "Katrine Matedios";
+      document.getElementById('email').value = localStorage.getItem('email') || "katrinematedios@gmail.com";
+      document.getElementById('phone').value = localStorage.getItem('phone') || "00192653823";
+      document.getElementById('address').value = localStorage.getItem('address') || "Pilipog Cordova Cebu";
+    };
+
+    function changeAvatar() {
+      alert("Change avatar feature clicked!");
+    }
+
+    function changePassword() {
+      alert("Change password clicked!");
+    }
+
+    function manageEmail() {
+      alert("Email Notifications settings Opened!"); 
+    }
+
+    function deleteAccount() {
+      if (confirm("Are you sure you want to delete your account? This cannot be undone.")) {
+        localStorage.clear();
+        alert("Your account has been deleted.");
+      }
+    }
+  </script>
+  
+    
+</body>
+</html>
+
+
+
+

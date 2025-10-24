@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logout</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*logout*/
+body {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.logout-box {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 320px;
+}
+
+.logout-box h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.logout-box button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.logout-box button:hover {
+  opacity: 0.9;
+}
+    </style>
+</head>
+<body>
+    <div class="logout-box">
+    <h2>You have successfully logged out.</h2>
+    <button onclick="goToSignup()">ok</button>
+  </div>
+
+  <script>
+    function goToSignup() {
+      window.location.href = "index.html";
+    }
+    </script>
+</body>
+</html>

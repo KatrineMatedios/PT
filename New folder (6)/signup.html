@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createaccount</title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background: #fff;
+    width: 700px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    text-align: center;
+  }
+
+  .logo {
+    width: 130px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #000;
+  }
+
+  p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+    font-size: 14px;
+  }
+
+  input:focus {
+    outline: none;
+    background: #eaeaea;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #333;
+  }
+
+  .footer-text {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .footer-text a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+    <div class="container">
+    <img src="kama.jpg.jpg" alt="Kamachendric Logo" class="logo">
+    <h2>Create Account</h2>
+    <p>Join Kamachendric Restaurant and start making reservations</p>
+
+    <form onsubmit="return goToHome()">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="your.email@example.com" required>
+      <input type="password" placeholder="Create Password" required>
+      <input type="password" placeholder="Confirm your Password" required>
+      <button type="submit">Sign in</button>
+    </form>
+
+    <div class="footer-text">
+      Already have an account? <a href="login.html">Log in</a>
+    </div>
+  </div>
+
+<script>
+  function goToHome() {
+    window.location.href = "index.html";
+    return false; // prevents actual form submission
+  }
+
+</script>
+
+  
+</body>
+
+
+</body>
+</html>

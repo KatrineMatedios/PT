@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 12px;
+  width: 600px;
+  padding: 40px 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 4px;
+}
+
+h2 {
+  margin-bottom: 5px;
+  font-weight: 650;
+  font-style: italic;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #333;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 15px;
+}
+
+.signup-text a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+    </style>
+    
+</head>
+<body>
+     <div class="login-container">
+    <div class="login-box">
+      <img src="kama.jpg.jpg" alt="Kamachendric Logo" class="logo">
+      <h2>Welcome</h2>
+      <p class="subtitle">Login to your Kamachendric Restaurant account</p>
+
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your.email@example.com" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your Password" required>
+
+        <!-- Forgot Password link -->
+        <a href="forgot-password.html" class="forgot">Forgot Password?</a>
+
+        <button type="submit" class="login-btn">Log in</button>
+      </form>
+
+      <p class="signup-text">
+        Don’t have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </div>
+  </div>
+
+ <script>
+    // When form is submitted, redirect to homepage
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      window.location.href = "index.html";
+
+    });
+  </script>
+</body>
+</html>
+
